@@ -7,3 +7,58 @@ Learned SQL Identifiers and naming rules.
 Studied SQL fundamentals.
 Covered SQL command categories: DDL, DML, DCL, TCL, and DQL.
 Understood the purpose of commands like CREATE, ALTER, DROP, TRUNCATE, INSERT, UPDATE, DELETE, COMMIT, ROLLBACK, SAVEPOINT, GRANT, REVOKE, and SELECT.
+
+## day 4 - SQL data definition language(DDL)
+# MySQL ALTER TABLE Practice
+
+This repository contains MySQL Data Definition Language (DDL) practice queries focused on the `ALTER TABLE` command. It demonstrates how to modify table structures using different SQL operations.
+
+## 📌 Topics Covered
+
+- Create Database
+- Create Table
+- Add Columns
+- Modify Column Data Types
+- Rename Columns
+- Drop Columns
+- Rename Tables
+- Change Column Position (FIRST, AFTER)
+- Practice with EMPLOYEES and COMPANY_STAFF tables
+
+## 🛠️ SQL Operations Used
+
+- CREATE DATABASE
+- USE DATABASE
+- CREATE TABLE
+- ALTER TABLE ADD COLUMN
+- ALTER TABLE MODIFY
+- ALTER TABLE CHANGE
+- ALTER TABLE DROP COLUMN
+- ALTER TABLE RENAME TO
+- DESC TABLE
+- SHOW TABLES
+
+## 🎯 Learning Objectives
+
+- Understand MySQL DDL commands.
+- Learn how to modify existing database tables.
+- Practice real-world table structure updates.
+- Improve SQL database management skills.
+
+## 💻 Technologies Used
+
+- MySQL
+- MySQL Workbench
+
+## 🚀 How to Run
+
+1. Open MySQL Workbench.
+2. Create or select a database.
+3. Execute the SQL script.
+4. Verify changes using `DESC` and `SHOW TABLES`.
+
+
+
+---
+
+⭐ If you found this project helpful, consider giving it a star!

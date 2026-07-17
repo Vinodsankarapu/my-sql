@@ -50,15 +50,48 @@ This repository contains MySQL Data Definition Language (DDL) practice queries f
 - MySQL
 - MySQL Workbench
 
-## 🚀 How to Run
+- DAY-5
 
-1. Open MySQL Workbench.
-2. Create or select a database.
-3. Execute the SQL script.
-4. Verify changes using `DESC` and `SHOW TABLES`.
+# MySQL DML Practice
+
+This repository contains my MySQL Day-5 practice on **Data Manipulation Language (DML)** commands. It includes syntax, examples, common errors, and query outputs for learning and interview preparation.
+
+## 📚 Topics Covered
+
+- INSERT
+  - Insert single record
+  - Insert multiple records
+  - Insert with selected columns
+  - INSERT ... SET syntax
+
+- UPDATE
+  - Update single column
+  - Update multiple columns
+  - Update records using WHERE clause
+
+- DELETE
+  - Delete specific records
+  - Delete using conditions
+
+## 🛠️ Technologies Used
+
+- MySQL
+- SQL (DML Commands)
+
+## 📂 Contents
+
+- INSERT statement examples
+- UPDATE statement examples
+- DELETE statement examples
+- Sample Employee table
+- MySQL syntax errors and their fixes
+- Query execution results
+
+## 🎯 Learning Outcomes
+
+- Understand DML operations in MySQL.
+- Practice inserting, updating, and deleting records.
+- Learn to identify and fix common SQL syntax errors.
+- Improve SQL query writing skills.
 
 
-
----
-
-⭐ If you found this project helpful, consider giving it a star!

@@ -1,0 +1,203 @@
+DAY-5
+=====
+DML
+---
+1.Insert
+--------
+insert into table-name(column-names)values(column-values);
+
+mysql> desc employees;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPID     | char(5)     | YES  |     | NULL    |       |
+| FIRSTNAME | varchar(30) | YES  |     | NULL    |       |
+| LASTNAME  | varchar(30) | YES  |     | NULL    |       |
+| AGE       | int         | YES  |     | NULL    |       |
+| DOJ       | date        | YES  |     | NULL    |       |
+| ADDRESS   | tinytext    | YES  |     | NULL    |       |
+| DEPT      | varchar(50) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> INSERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VLAUES
+    -> ('E001', 'VINOD', 'KUMAR', 21,'2024-04-20', 'HYD', 'JAVA);
+    '> ^C
+mysql> SELECT *FROM EMPLOYEES;
+Empty set (0.00 sec)
+
+mysql> INSEERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VALUES
+    -> ('E001', 'VINOD', 'KUMAR', 21, '2024-04-20', 'HYD', 'JAVA');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSEERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VALUE' at line 1
+mysql> INSERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VALUES
+    -> ('E001', 'VINOD', 'KUMAR', 21, '2024-04-20', 'HYD', 'JAVA');
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SELECT*FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT |
++-------+-----------+----------+------+------------+---------+------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | JAVA |
++-------+-----------+----------+------+------------+---------+------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VALUES
+    -> ('E002', 'ARJUN', 'SARKAR', 27, '2020-07-20', 'BNJ', 'SALES');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO EMPLOYEES(EMPID, FIRSTNAME, LASTNAME, AGE, DOJ, ADDRESS, DEPT)VALUES
+    -> ('E003', 'MAHESH', 'BABU', 37, '2020-10-10', 'VIJ', 'HR');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> SELECT*FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT  |
++-------+-----------+----------+------+------------+---------+-------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | JAVA  |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR    |
++-------+-----------+----------+------+------------+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO EMPLOYEES(FIRSTNAME, DOJ, AGE, DEPT, ADDRESS, LASTNAME, EMPID)VALUES
+    -> ('SAI', '2018-08012', '29', 'ADMIN', 'PUNE', 'KIRAN', 'EOO04');
+ERROR 1292 (22007): Incorrect date value: '2018-08012' for column 'DOJ' at row 1
+mysql>
+mysql>  INSERT INTO EMPLOYEES(FIRSTNAME, DOJ, AGE, DEPT, ADDRESS, LASTNAME, EMPID)VALUES
+    -> ('SAI', '2018-08-12', '29', 'ADMIN', 'PUNE', 'KIRAN', 'EOO04');
+Query OK, 1 row affected (0.04 sec)
+
+mysql> INSERT INTO EMPLOYEES
+    -> VALUES
+    -> ('E005', 'ROHIT', 'SHARMA', 45, '2002-2-24', 'VIZAG', 'CRICKET'),
+    -> ('E006', 'RAHUL', 'SHARMA', 11, '2026-03-18', 'NODIA', 'DEV'),
+    -> ('E007', 'NANDINI', 'REDDY', 15, '2021-07-07', 'DELHI', 'QA');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO EMPLOYEES(EMPID, FIRSTNAME, DOJ, DEPT)VALUES
+    -> ('E008', 'SANDEEP', '1997-05-07', 'MARKETING');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO EMPLOYEES SET
+    -> EMPID = 'E009',
+    -> FIRSTNAME = 'SUDHEER',
+    -> LASTNAME = 'KUMAR',
+    -> AGE = 18,
+    -> DOJ = '2025-03-24',
+    -> ADDRESS = 'MUMBAI',
+    -> DEPT = 'SALES';
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SELECT*FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | JAVA      |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES     |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR        |
+| EOO04 | SAI       | KIRAN    |   29 | 2018-08-12 | PUNE    | ADMIN     |
+| E005  | ROHIT     | SHARMA   |   45 | 2002-02-24 | VIZAG   | CRICKET   |
+| E006  | RAHUL     | SHARMA   |   11 | 2026-03-18 | NODIA   | DEV       |
+| E007  | NANDINI   | REDDY    |   15 | 2021-07-07 | DELHI   | QA        |
+| E008  | SANDEEP   | NULL     | NULL | 1997-05-07 | NULL    | MARKETING |
+| E009  | SUDHEER   | KUMAR    |   18 | 2025-03-24 | MUMBAI  | SALES     |
++-------+-----------+----------+------+------------+---------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> --syntax update: update table-name set column-name = update-value where some condition
+    -> ^C
+mysql> UPDATE EMPLOYEES SET LASTNAME = 'REDDY', AGE = 27, ADDRESS = 'PUNE' WHERE CONDITION EMPID = 'E008;
+    '>
+    '>
+    '>
+    '> ^C
+mysql> UPDATE EMPLOYEES SET LASTNAME = 'REDDY', AGE = 27, ADDRESS = 'PUNE' WHERE EMPID = 'E008';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT*FROM EMPLOYEES WHERE EMPID = 'E008';
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E008  | SANDEEP   | REDDY    |   27 | 1997-05-07 | PUNE    | MARKETING |
++-------+-----------+----------+------+------------+---------+-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | JAVA      |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES     |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR        |
+| EOO04 | SAI       | KIRAN    |   29 | 2018-08-12 | PUNE    | ADMIN     |
+| E005  | ROHIT     | SHARMA   |   45 | 2002-02-24 | VIZAG   | CRICKET   |
+| E006  | RAHUL     | SHARMA   |   11 | 2026-03-18 | NODIA   | DEV       |
+| E007  | NANDINI   | REDDY    |   15 | 2021-07-07 | DELHI   | QA        |
+| E008  | SANDEEP   | REDDY    |   27 | 1997-05-07 | PUNE    | MARKETING |
+| E009  | SUDHEER   | KUMAR    |   18 | 2025-03-24 | MUMBAI  | SALES     |
++-------+-----------+----------+------+------------+---------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> UPDATE EMPLOYEES SET DEPT = 'FINICIAL' WHERE EMPID = 'E001';
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE EMPLOYEES SET DEPT = 'DEVOPS' WHERE EMPID = 'E006';
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | FINICIAL  |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES     |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR        |
+| EOO04 | SAI       | KIRAN    |   29 | 2018-08-12 | PUNE    | ADMIN     |
+| E005  | ROHIT     | SHARMA   |   45 | 2002-02-24 | VIZAG   | CRICKET   |
+| E006  | RAHUL     | SHARMA   |   11 | 2026-03-18 | NODIA   | DEVOPS    |
+| E007  | NANDINI   | REDDY    |   15 | 2021-07-07 | DELHI   | QA        |
+| E008  | SANDEEP   | REDDY    |   27 | 1997-05-07 | PUNE    | MARKETING |
+| E009  | SUDHEER   | KUMAR    |   18 | 2025-03-24 | MUMBAI  | SALES     |
++-------+-----------+----------+------+------------+---------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> --- SYNTAX::DELTE FROM TABLE-NAME WHERE CONDITION;
+    -> ^C
+mysql> DELETE FROM EMPLOYEES WHERE LASTNAME = 'SHARMA';
+Query OK, 2 rows affected (0.02 sec)
+
+mysql> SELECT*FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | FINICIAL  |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES     |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR        |
+| EOO04 | SAI       | KIRAN    |   29 | 2018-08-12 | PUNE    | ADMIN     |
+| E007  | NANDINI   | REDDY    |   15 | 2021-07-07 | DELHI   | QA        |
+| E008  | SANDEEP   | REDDY    |   27 | 1997-05-07 | PUNE    | MARKETING |
+| E009  | SUDHEER   | KUMAR    |   18 | 2025-03-24 | MUMBAI  | SALES     |
++-------+-----------+----------+------+------------+---------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> DELETE FROM EMPLOYEES WHERE EMPID = 'EOO04';
+Query OK, 1 row affected (0.04 sec)
+
+mysql> SELECT * FROM EMPLOYEES;
++-------+-----------+----------+------+------------+---------+-----------+
+| EMPID | FIRSTNAME | LASTNAME | AGE  | DOJ        | ADDRESS | DEPT      |
++-------+-----------+----------+------+------------+---------+-----------+
+| E001  | VINOD     | KUMAR    |   21 | 2024-04-20 | HYD     | FINICIAL  |
+| E002  | ARJUN     | SARKAR   |   27 | 2020-07-20 | BNJ     | SALES     |
+| E003  | MAHESH    | BABU     |   37 | 2020-10-10 | VIJ     | HR        |
+| E007  | NANDINI   | REDDY    |   15 | 2021-07-07 | DELHI   | QA        |
+| E008  | SANDEEP   | REDDY    |   27 | 1997-05-07 | PUNE    | MARKETING |
+| E009  | SUDHEER   | KUMAR    |   18 | 2025-03-24 | MUMBAI  | SALES     |
++-------+-----------+----------+------+------------+---------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> --SYNATX::TRUNCATE TABLE TABLE-NAME
+    ->

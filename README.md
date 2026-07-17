@@ -50,10 +50,8 @@ This repository contains MySQL Data Definition Language (DDL) practice queries f
 - MySQL
 - MySQL Workbench
 
+  # MySQL DML Practice day -5
   
-
-DAY-5 DML(DATA MANIPULATION LANGUAGE)
-
 This repository contains my MySQL Day-5 practice on **Data Manipulation Language (DML)** commands. It includes syntax, examples, common errors, and query outputs for learning and interview preparation.
 
 ## 📚 Topics Covered
@@ -93,5 +91,6 @@ This repository contains my MySQL Day-5 practice on **Data Manipulation Language
 - Practice inserting, updating, and deleting records.
 - Learn to identify and fix common SQL syntax errors.
 - Improve SQL query writing skills.
+
 
 

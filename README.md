@@ -92,5 +92,15 @@ This repository contains my MySQL Day-5 practice on **Data Manipulation Language
 - Learn to identify and fix common SQL syntax errors.
 - Improve SQL query writing skills.
 
+# MySQL DCL day - 6
 
+This repository contains MySQL practice examples covering:
 
+- Creating databases and tables
+- AUTO_INCREMENT and generated columns
+- INSERT, UPDATE, SELECT operations
+- Creating backup tables
+- CREATE USER and user authentication
+- GRANT and REVOKE privileges
+- Testing user permissions
+- Common SQL syntax and permission errors

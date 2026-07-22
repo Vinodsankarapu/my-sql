@@ -104,3 +104,52 @@ This repository contains MySQL practice examples covering:
 - GRANT and REVOKE privileges
 - Testing user permissions
 - Common SQL syntax and permission errors
+
+- # 📘 Day 7 – SQL Transaction Control Language (TCL) & Locking
+
+## 📌 Overview
+
+On Day 7, I learned **Transaction Control Language (TCL)** commands and **database locking mechanisms** in MySQL. These concepts are essential for managing database transactions, maintaining data integrity, and controlling concurrent access to data.
+
+## 📚 Topics Covered
+
+### Transaction Control Language (TCL)
+
+* START TRANSACTION
+* COMMIT
+* ROLLBACK
+* SAVEPOINT
+
+### Locking Mechanisms
+
+* Shared Lock
+* Exclusive Lock
+* Intent Lock
+* READ Lock
+* WRITE Lock
+* LOCK TABLES
+* UNLOCK TABLES
+
+## 💻 Practical Exercises
+
+* Created and managed database transactions.
+* Used **COMMIT** to permanently save changes.
+* Used **ROLLBACK** to undo transactions.
+* Created **SAVEPOINTS** and rolled back to specific points.
+* Practiced table locking using **READ** and **WRITE** locks.
+* Learned how locks prevent data conflicts when multiple users access the same table.
+
+## 🎯 Key Learnings
+
+* Understood the purpose of database transactions.
+* Learned how TCL commands ensure data consistency.
+* Explored different types of locks and their use cases.
+* Gained hands-on experience with transaction management in MySQL.
+
+## 🛠️ Technologies Used
+
+* MySQL
+* SQL (TCL Commands)
+
+
+

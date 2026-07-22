@@ -151,5 +151,86 @@ On Day 7, I learned **Transaction Control Language (TCL)** commands and **databa
 * MySQL
 * SQL (TCL Commands)
 
+  # 📘 Day 8 – SQL Constraints
+
+## 📌 Overview
+
+On **Day 8**, I learned about **SQL Constraints** in MySQL. Constraints are rules applied to table columns to ensure that only valid, accurate, and consistent data is stored in the database.
+
+## 📚 Topics Covered
+
+### What are Constraints?
+
+Constraints are rules that control the data entered into a table. They help maintain the accuracy and integrity of the database.
+
+### Why Do We Use Constraints?
+
+* Maintain data integrity
+* Prevent invalid data entry
+* Avoid duplicate records
+* Ensure relationships between tables
+* Make the database reliable and consistent
+
+## 🛠️ Types of Constraints
+
+### 1. NOT NULL
+
+* Prevents `NULL` values from being stored in a column.
+
+### 2. UNIQUE
+
+* Ensures that all values in a column are unique.
+* Duplicate values are not allowed.
+
+### 3. PRIMARY KEY
+
+* A combination of **NOT NULL** and **UNIQUE**.
+* Uniquely identifies each record in a table.
+
+### 4. COMPOSITE KEY
+
+* A primary key made up of **two or more columns**.
+* Used when a single column cannot uniquely identify a record.
+
+### 5. FOREIGN KEY
+
+* Creates a relationship between two tables.
+* References the **Primary Key** of another table.
+* The table containing the foreign key is called the **Child Table**.
+* The referenced table is called the **Parent (Referenced) Table**.
+
+### 6. CHECK
+
+* Restricts the values that can be entered into a column.
+* Ensures that only values satisfying a specified condition are accepted.
+
+### 7. DEFAULT
+
+* Automatically assigns a predefined value to a column if no value is provided during an `INSERT` operation.
+
+## 🔗 Referential Actions
+
+Referential actions define what happens to child table data when parent table data is updated or deleted.
+
+* **ON DELETE CASCADE**
+* **ON UPDATE CASCADE**
+* **ON DELETE SET NULL**
+* **ON UPDATE SET NULL**
+
+## 💻 Practical Learning
+
+* Applied different SQL constraints while creating tables.
+* Understood how constraints improve data accuracy.
+* Practiced creating relationships using Foreign Keys.
+* Explored referential actions to maintain consistency between related tables.
+
+## 🛠️ Technologies Used
+
+* MySQL
+* SQL
+
+
+
+
 
 

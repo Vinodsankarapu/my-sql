@@ -230,7 +230,90 @@ Referential actions define what happens to child table data when parent table da
 * SQL
 
 
+# MySQL DAY - 9:
 
+This repository contains my MySQL practice programs and exercises. It covers SQL fundamentals, CRUD operations, arithmetic operators, comparison operators, logical operators, and conditional queries using sample databases.
+
+## Topics Covered
+
+- Database and Table Creation
+- INSERT Records
+- SELECT Queries
+- Arithmetic Operators
+  - Addition (+)
+  - Subtraction (-)
+  - Multiplication (*)
+  - Division (/)
+  - Modulus (%)
+- Comparison Operators
+  - =
+  - !=
+  - <>
+  - >
+  - <
+  - >=
+  - <=
+- Logical Operators
+  - AND
+  - OR
+  - NOT
+- UPDATE Statements
+- DELETE Statements
+- DROP TABLE
+- Query Aliases (AS)
+- Conditional Filtering (WHERE)
+
+## Practice Tables
+
+### Products
+- Product inventory management
+- Price calculations
+- Inventory value calculations
+- Quantity updates
+- Product deletion based on conditions
+
+### StudentScores
+- Student marks analysis
+- Filtering students using comparison operators
+- Updating marks based on conditions
+- Deleting records using WHERE clause
+
+### Employees
+- Employee management
+- Department-wise filtering
+- Salary updates
+- Active/Inactive employee management
+- Logical operator practice
+
+## SQL Concepts Practiced
+
+- CREATE TABLE
+- INSERT INTO
+- SELECT
+- UPDATE
+- DELETE
+- DROP TABLE
+- WHERE
+- AS
+- Arithmetic Expressions
+- Comparison Operators
+- Logical Operators
+
+## Tools Used
+
+- MySQL 8.x
+- MySQL Command Line Client
+
+## Learning Outcome
+
+Through this practice, I learned how to:
+- Create and manage tables
+- Perform CRUD operations
+- Write efficient SELECT queries
+- Apply arithmetic calculations in SQL
+- Use comparison and logical operators
+- Update and delete records based on conditions
+- Work with real-world sample data
 
 
 
